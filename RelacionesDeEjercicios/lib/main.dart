@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Drawer Demo',
       theme: ThemeData(
         primaryColor: const Color(0xFF3b605f),  // Color principal

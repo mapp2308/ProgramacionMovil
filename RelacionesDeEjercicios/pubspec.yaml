@@ -67,6 +67,10 @@ flutter:
     - assets/historia2.jpeg
     - assets/historia3.jpeg
     - assets/+.png
+    - assets/mora_paraiso-portada.jpg
+    - assets/mora_estrella-portada.jpg
+    - assets/microdosis.jpg
+
     
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

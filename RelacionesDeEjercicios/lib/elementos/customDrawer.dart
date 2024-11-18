@@ -1,11 +1,13 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application/columnas_anidadas/columnas_anidadas.dart';
 import 'package:flutter_application/contador/contador_screen.dart';
-import '../ejercicio1/screens/icons_screen.dart';
-import '../ejercicio1/screens/photos_row_screen.dart';
-import '../ejercicio1/screens/photos_column_screen.dart';
-import '../ejercicio1/screens/name_screen.dart';
+import 'package:flutter_application/entrega3/imagenes_aleatorias.dart';
+import '../ejercicio1/icons_screen.dart';
+import '../ejercicio1/photos_row_screen.dart';
+import '../ejercicio1/photos_column_screen.dart';
+import '../ejercicio1/name_screen.dart';
 import '../instagram/instagram.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -65,14 +67,14 @@ class CustomDrawer extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const IconsScreen()));
             },
           ),
-          ListTile(
+           ListTile(
             title:
-                const Text('Instagram', style: TextStyle(color: Colors.white)),
+                const Text('Columnas Anidadas', style: TextStyle(color: Colors.white)),
             onTap: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const InstagramProfileApp()));
+                      builder: (context) => const ColumnasAnidadas()));
             },
           ),
           ListTile(
@@ -83,6 +85,26 @@ class CustomDrawer extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const ContadorApp()));
+            },
+          ),
+          ListTile(
+            title:
+                const Text('Instagram', style: TextStyle(color: Colors.white)),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const InstagramProfileApp()));
+            },
+          ),
+            ListTile(
+            title:
+                const Text('Imagenes Aleatorias', style: TextStyle(color: Colors.white)),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ImagenesAleatorias()));
             },
           ),
         ],
