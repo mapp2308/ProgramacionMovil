@@ -1,5 +1,4 @@
-//import 'package:flutter/material.dart';
-import 'package:flutter_application/rutas_nombradas/screens.dart';
+import 'package:flutter/material.dart';
 
 class InstagramProfileApp extends StatelessWidget {
   const InstagramProfileApp({super.key});
@@ -10,8 +9,33 @@ class InstagramProfileApp extends StatelessWidget {
   }
 }
 
-class InstagramProfilePage extends StatelessWidget {
+class InstagramProfilePage extends StatefulWidget {
   const InstagramProfilePage({super.key});
+
+  @override
+  State<InstagramProfilePage> createState() => _InstagramProfilePageState();
+}
+
+class _InstagramProfilePageState extends State<InstagramProfilePage> {
+  bool showAlternateImages = false;
+
+  // Listas de imágenes
+  final List<String> gridImages = [
+    'assets/foto1.jpeg',
+    'assets/foto2.jpeg',
+    'assets/foto3.jpeg',
+    'assets/foto4.jpeg',
+    'assets/foto5.jpeg',
+  ];
+
+  final List<String> portraitImages = [
+    'assets/imagen1.jpg',
+    'assets/imagen2.jpg',
+    'assets/imagen3.png',
+    'assets/mora_paraiso-portada.jpg',
+    'assets/mora_estrella-portada.jpg',
+    'assets/microdosis.jpg',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +50,7 @@ class InstagramProfilePage extends StatelessWidget {
           IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),
         ],
       ),
-      drawer: const CustomDrawer(),
+      drawer: const Drawer(), // Placeholder for CustomDrawer
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -153,10 +177,6 @@ class InstagramProfilePage extends StatelessWidget {
                     _circuloHistoria('assets/historia1.jpeg', '🌍'),
                     _circuloHistoria('assets/historia2.jpeg', ':):'),
                     _circuloHistoria('assets/historia3.jpeg', 'Fr'),
-                    _circuloHistoria('assets/+.png', 'Nuevo'),
-                    _circuloHistoria('assets/historia1.jpeg', '🌍'),
-                    _circuloHistoria('assets/historia2.jpeg', ':):'),
-                    _circuloHistoria('assets/historia3.jpeg', 'Fr'),
                   ],
                 ),
               ),
@@ -172,11 +192,19 @@ class InstagramProfilePage extends StatelessWidget {
                 children: [
                   IconButton(
                     icon: const Icon(Icons.grid_on, color: Colors.white),
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        showAlternateImages = false;
+                      });
+                    },
                   ),
                   IconButton(
                     icon: const Icon(Icons.portrait, color: Colors.white),
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        showAlternateImages = true;
+                      });
+                    },
                   ),
                 ],
               ),
@@ -192,12 +220,16 @@ class InstagramProfilePage extends StatelessWidget {
                 crossAxisSpacing: 2.0,
                 mainAxisSpacing: 2.0,
               ),
-              itemCount: 5, // Número de publicaciones
+              itemCount: showAlternateImages
+                  ? portraitImages.length
+                  : gridImages.length,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/foto${index + 1}.jpeg'),
+                      image: AssetImage(showAlternateImages
+                          ? portraitImages[index]
+                          : gridImages[index]),
                       fit: BoxFit.cover,
                     ),
                   ),
