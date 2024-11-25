@@ -1,11 +1,4 @@
-import 'package:flutter/material.dart';
-//import 'package:hello_world_app/presentation/screens/counter/counter_sreen.dart';
-
-import 'package:flutter_application/contador/screens/counter_function_screen.dart';
-
-void main() {
-  runApp(const ContadorApp());
-}
+import 'package:flutter_application/rutas_nombradas/screens.dart';
 
 class ContadorApp extends StatelessWidget {
   const ContadorApp({super.key});

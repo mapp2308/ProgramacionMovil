@@ -1,14 +1,8 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application/columnas_anidadas/columnas_anidadas.dart';
-import 'package:flutter_application/contador/contador_screen.dart';
-import 'package:flutter_application/entrega3/imagenes_aleatorias.dart';
-import '../ejercicio1/icons_screen.dart';
-import '../ejercicio1/photos_row_screen.dart';
-import '../ejercicio1/photos_column_screen.dart';
-import '../ejercicio1/name_screen.dart';
-import '../instagram/instagram.dart';
+import 'package:flutter_application/rutas_nombradas/app_routes.dart';
+
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -36,75 +30,55 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(color: Colors.white)),
     
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const NameScreen()));
+              Navigator.of(context).pushReplacementNamed(AppRoutes.nameScreen);
             },
           ),
           ListTile(
             title: const Text('Fotos en Fila',
                 style: TextStyle(color: Colors.white)),
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const PhotosRowScreen()));
+              Navigator.of(context).pushReplacementNamed(AppRoutes.photosRow);
             },
           ),
           ListTile(
             title: const Text('Fotos en Columna',
                 style: TextStyle(color: Colors.white)),
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const PhotosColumnScreen()));
+              Navigator.of(context).pushReplacementNamed(AppRoutes.photosColumn);
             },
           ),
           ListTile(
             title: const Text('Iconos', style: TextStyle(color: Colors.white)),
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const IconsScreen()));
+              Navigator.of(context).pushReplacementNamed(AppRoutes.iconsScreen);
             },
           ),
            ListTile(
             title:
                 const Text('Columnas Anidadas', style: TextStyle(color: Colors.white)),
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ColumnasAnidadas()));
+              Navigator.of(context).pushReplacementNamed(AppRoutes.columnasAnidadas);
             },
           ),
           ListTile(
             title:
                 const Text('Contador', style: TextStyle(color: Colors.white)),
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ContadorApp()));
+              Navigator.of(context).pushReplacementNamed(AppRoutes.contador);
             },
           ),
           ListTile(
             title:
                 const Text('Instagram', style: TextStyle(color: Colors.white)),
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const InstagramProfileApp()));
+              Navigator.of(context).pushReplacementNamed(AppRoutes.instagram);
             },
           ),
             ListTile(
             title:
                 const Text('Imagenes Aleatorias', style: TextStyle(color: Colors.white)),
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ImagenesAleatorias()));
+              Navigator.of(context).pushReplacementNamed(AppRoutes.imagenesAleatorias);
             },
           ),
         ],

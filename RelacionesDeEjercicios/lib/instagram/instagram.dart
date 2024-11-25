@@ -1,9 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_application/elementos/customDrawer.dart';
-
-void main() {
-  runApp(const InstagramProfileApp());
-}
+//import 'package:flutter/material.dart';
+import 'package:flutter_application/rutas_nombradas/screens.dart';
 
 class InstagramProfileApp extends StatelessWidget {
   const InstagramProfileApp({super.key});
@@ -22,29 +18,29 @@ class InstagramProfilePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: const Text("miguelperaza_",
-            style: TextStyle(fontSize: 20, color: Colors.white)),
+        title: const Text(
+          "miguelperaza_",
+          style: TextStyle(fontSize: 20, color: Colors.white),
+        ),
         actions: [
           IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),
         ],
       ),
-      drawer: const CustomDrawer(), // Aquí se llama al CustomDrawer
+      drawer: const CustomDrawer(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Información del perfil
             const Padding(
               padding: EdgeInsets.all(16.0),
               child: Row(
                 children: [
                   CircleAvatar(
                     radius: 40,
-                    backgroundImage:
-                        AssetImage('assets/perfil.jpeg'), // Imagen del perfil
+                    backgroundImage: AssetImage('assets/perfil.jpeg'),
                   ),
-                  SizedBox(
-                      width:
-                          110), // <--- Añadimos este espacio entre la foto y la info de cuenta
+                  SizedBox(width: 110),
                   Column(
                     children: [
                       Text(
@@ -61,9 +57,7 @@ class InstagramProfilePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
-                      width:
-                          24), // Ajustamos los espacios entre las columnas de estadísticas
+                  SizedBox(width: 24),
                   Column(
                     children: [
                       Text(
@@ -102,29 +96,24 @@ class InstagramProfilePage extends StatelessWidget {
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "miguel peraza",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(
-                        "📍 Malaga",
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                      Text(
-                        "@_perazaapriv",
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ],
+                  Text(
+                    "miguel peraza",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text(
+                    "📍 Malaga",
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                  Text(
+                    "@_perazaapriv",
+                    style: TextStyle(color: Colors.blue),
                   ),
                 ],
               ),
@@ -135,10 +124,10 @@ class InstagramProfilePage extends StatelessWidget {
               padding:
                   const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
               child: SizedBox(
-                width: double.infinity, // Ocupa todo el ancho posible
+                width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[800], // Color del botón
+                    backgroundColor: Colors.grey[800],
                     padding: const EdgeInsets.symmetric(vertical: 12.0),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -156,20 +145,26 @@ class InstagramProfilePage extends StatelessWidget {
             // Sección de historias destacadas
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  // Historias destacadas
-                  _circuloHistoria('assets/+.png', 'Nuevo'),
-                  _circuloHistoria('assets/historia1.jpeg', '🌍'),
-                  _circuloHistoria('assets/historia2.jpeg', ':):'),
-                  _circuloHistoria('assets/historia3.jpeg', 'Fr'),
-                ],
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    _circuloHistoria('assets/+.png', 'Nuevo'),
+                    _circuloHistoria('assets/historia1.jpeg', '🌍'),
+                    _circuloHistoria('assets/historia2.jpeg', ':):'),
+                    _circuloHistoria('assets/historia3.jpeg', 'Fr'),
+                    _circuloHistoria('assets/+.png', 'Nuevo'),
+                    _circuloHistoria('assets/historia1.jpeg', '🌍'),
+                    _circuloHistoria('assets/historia2.jpeg', ':):'),
+                    _circuloHistoria('assets/historia3.jpeg', 'Fr'),
+                  ],
+                ),
               ),
             ),
 
             const Divider(color: Colors.grey),
 
+            // Opciones de vista
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
@@ -188,21 +183,21 @@ class InstagramProfilePage extends StatelessWidget {
             ),
             const Divider(color: Colors.grey),
 
+            // Publicaciones
             GridView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
-                crossAxisSpacing: 4.0,
-                mainAxisSpacing: 4.0,
+                crossAxisSpacing: 2.0,
+                mainAxisSpacing: 2.0,
               ),
               itemCount: 5, // Número de publicaciones
               itemBuilder: (BuildContext context, int index) {
                 return Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(
-                          'assets/foto${index + 1}.jpeg'), // Imágenes de ejemplo
+                      image: AssetImage('assets/foto${index + 1}.jpeg'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -216,20 +211,23 @@ class InstagramProfilePage extends StatelessWidget {
     );
   }
 
-  // Método para construir el círculo de historias
+  // Método para construir el círculo de historias destacadas
   Widget _circuloHistoria(String imagePath, String label) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundImage: AssetImage(imagePath),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          label,
-          style: const TextStyle(color: Colors.white, fontSize: 12),
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: Column(
+        children: [
+          CircleAvatar(
+            radius: 30,
+            backgroundImage: AssetImage(imagePath),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            label,
+            style: const TextStyle(color: Colors.white, fontSize: 12),
+          ),
+        ],
+      ),
     );
   }
 }

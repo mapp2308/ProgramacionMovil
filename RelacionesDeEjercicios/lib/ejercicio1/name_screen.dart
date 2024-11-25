@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_application/elementos/customDrawer.dart';
+import 'package:flutter_application/rutas_nombradas/screens.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NameScreen extends StatelessWidget {
@@ -23,12 +22,14 @@ class NameScreen extends StatelessWidget {
                 color: Colors.blue,
               ),
             ),
-            const SizedBox(height: 20),
-            const Text(
-              'https://github.com/mapp2308/ProgramacionMovil',
-              style: TextStyle(
-                fontSize: 18,
-                fontStyle: FontStyle.italic,
+            
+            Container(
+              color: const Color(0xFF94CCF9),
+              padding: const EdgeInsets.all(10),
+              margin: const EdgeInsets.only(left: 9, top: 20),
+              child: const Text(
+                'https://github.com/mapp2308/ProgramacionMovil',
+              style: TextStyle(fontSize: 15, color: Color(0xFF04589A)),
               ),
             ),
           ],

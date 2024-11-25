@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_application/elementos/customDrawer.dart';
+import 'package:flutter_application/rutas_nombradas/screens.dart';
 
 class PhotosRowScreen extends StatelessWidget {
   const PhotosRowScreen({super.key});
