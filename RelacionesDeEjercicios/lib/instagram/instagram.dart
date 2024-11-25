@@ -64,7 +64,7 @@ class _InstagramProfilePageState extends State<InstagramProfilePage> {
                     radius: 40,
                     backgroundImage: AssetImage('assets/perfil.jpeg'),
                   ),
-                  SizedBox(width: 110),
+                  SizedBox(width: 15),
                   Column(
                     children: [
                       Text(
@@ -81,7 +81,7 @@ class _InstagramProfilePageState extends State<InstagramProfilePage> {
                       ),
                     ],
                   ),
-                  SizedBox(width: 24),
+                  SizedBox(width: 15),
                   Column(
                     children: [
                       Text(
@@ -98,7 +98,7 @@ class _InstagramProfilePageState extends State<InstagramProfilePage> {
                       ),
                     ],
                   ),
-                  SizedBox(width: 24),
+                  SizedBox(width: 15),
                   Column(
                     children: [
                       Text(
@@ -174,6 +174,9 @@ class _InstagramProfilePageState extends State<InstagramProfilePage> {
                 child: Row(
                   children: [
                     _circuloHistoria('assets/+.png', 'Nuevo'),
+                    _circuloHistoria('assets/historia1.jpeg', '🌍'),
+                    _circuloHistoria('assets/historia2.jpeg', ':):'),
+                    _circuloHistoria('assets/historia3.jpeg', 'Fr'),
                     _circuloHistoria('assets/historia1.jpeg', '🌍'),
                     _circuloHistoria('assets/historia2.jpeg', ':):'),
                     _circuloHistoria('assets/historia3.jpeg', 'Fr'),
