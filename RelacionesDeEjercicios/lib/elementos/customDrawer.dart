@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application/rutas_nombradas/app_routes.dart';
+import 'package:flutter_application/routes/app_routes.dart';
 
 
 class CustomDrawer extends StatelessWidget {
@@ -10,6 +10,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
@@ -61,6 +62,13 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            title: const Text('Desafío Contenedores',
+                style: TextStyle(color: Colors.white)),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(AppRoutes.desafios);
+            },
+          ),
+          ListTile(
             title:
                 const Text('Contador', style: TextStyle(color: Colors.white)),
             onTap: () {
@@ -79,6 +87,14 @@ class CustomDrawer extends StatelessWidget {
                 const Text('Imagenes Aleatorias', style: TextStyle(color: Colors.white)),
             onTap: () {
               Navigator.of(context).pushReplacementNamed(AppRoutes.imagenesAleatorias);
+            },
+            
+          ),
+              ListTile(
+            title:
+                const Text('Siete y Medio', style: TextStyle(color: Colors.white)),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(AppRoutes.sieteymedio);
             },
           ),
         ],

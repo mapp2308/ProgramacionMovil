@@ -1,4 +1,5 @@
-import 'screens.dart';
+
+import '../screens/screens.dart';
 
 class AppRoutes {
   // Definir nombres claros para las rutas
@@ -11,6 +12,8 @@ class AppRoutes {
   static const String photosColumn = '/photos-column';
   static const String nameScreen = '/name';
   static const String instagram = '/instagram';
+  static const String sieteymedio = '/siete-y-medio';
+  static const String desafios = '/desafio';
 
   // Mapa de rutas nombradas con sus respectivas pantallas
   static final Map<String, WidgetBuilder> routes = {
@@ -23,6 +26,7 @@ class AppRoutes {
     photosColumn: (context) => const PhotosColumnScreen(),
     nameScreen: (context) => const NameScreen(),
     instagram: (context) => const InstagramProfileApp(),
-  
+    sieteymedio: (context) => const SieteYMedioApp(),
+    desafios: (context) => const DesafiosScreen(),
   };
 }

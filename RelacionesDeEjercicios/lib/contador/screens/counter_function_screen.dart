@@ -1,4 +1,4 @@
-import 'package:flutter_application/rutas_nombradas/screens.dart';
+import 'package:flutter_application/screens/screens.dart';
 
 class CounterFunctionsScreen extends StatefulWidget {
   const CounterFunctionsScreen({super.key});
@@ -51,18 +51,22 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
             },
           ),
           const SizedBox(height: 10),
-          CustomButton(icon: Icons.plus_one,
+          CustomButton(
+            icon: Icons.plus_one,
             onPressed: () {
               clickCounter++;
               setState(() {});
-            },),
+            },
+          ),
           const SizedBox(height: 10),
-          CustomButton(icon: Icons.exposure_minus_1,
+          CustomButton(
+            icon: Icons.exposure_minus_1,
             onPressed: () {
-              if (clickCounter==0) return;
+              if (clickCounter == 0) return;
               clickCounter--;
               setState(() {});
-            },),
+            },
+          ),
         ],
       ),
     );
@@ -79,14 +83,15 @@ class CustomButton extends StatelessWidget {
     this.onPressed,
   });
 
- @override
+  @override
   Widget build(BuildContext context) {
-    return FloatingActionButton(
-      // shape: const StadiumBorder(),
-      enableFeedback: true,
-      elevation: 5,
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        shape: const CircleBorder(), // Botón circular similar a FloatingActionButton
+        padding: const EdgeInsets.all(16), // Tamaño del botón
+      ),
       onPressed: onPressed,
-      child: Icon(icon),
+      child: Icon(icon, size: 32), // Ícono del botón
     );
   }
 }

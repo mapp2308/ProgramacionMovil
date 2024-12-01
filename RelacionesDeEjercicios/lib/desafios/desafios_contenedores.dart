@@ -1,28 +1,19 @@
 import 'package:flutter_application/screens/screens.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-class NameScreen extends StatelessWidget {
-  const NameScreen({super.key});
+class DesafiosScreen extends StatelessWidget {
+  const DesafiosScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tu Nombre y Apellidos'),
+        title: const Text('Desafío contenedores'),
       ),
       drawer: const CustomDrawer(), // Aquí se llama al CustomDrawer
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'Miguel Antonio Peraza Peña',
-              style: GoogleFonts.lobster(
-                fontSize: 32,
-                color: Colors.blue,
-              ),
-            ),
-            
             Container(
               color: const Color(0xFF94CCF9),
               padding: const EdgeInsets.all(10),

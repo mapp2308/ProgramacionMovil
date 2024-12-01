@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/elementos/customDrawer.dart';
 
 class InstagramProfileApp extends StatelessWidget {
   const InstagramProfileApp({super.key});
@@ -26,6 +27,16 @@ class _InstagramProfilePageState extends State<InstagramProfilePage> {
     'assets/foto3.jpeg',
     'assets/foto4.jpeg',
     'assets/foto5.jpeg',
+    'assets/foto3.jpeg',
+    'assets/foto4.jpeg',
+    'assets/foto5.jpeg','assets/foto1.jpeg',
+    'assets/foto2.jpeg',
+    'assets/foto3.jpeg',
+    'assets/foto4.jpeg',
+    'assets/foto5.jpeg',
+    'assets/foto3.jpeg',
+    'assets/foto4.jpeg',
+    'assets/foto5.jpeg',
   ];
 
   final List<String> portraitImages = [
@@ -50,7 +61,7 @@ class _InstagramProfilePageState extends State<InstagramProfilePage> {
           IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),
         ],
       ),
-      drawer: const Drawer(), // Placeholder for CustomDrawer
+      drawer: const CustomDrawer(), // Placeholder for CustomDrawer
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -124,7 +135,7 @@ class _InstagramProfilePageState extends State<InstagramProfilePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "miguel peraza",
+                    "Miguel Peraza",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -132,7 +143,7 @@ class _InstagramProfilePageState extends State<InstagramProfilePage> {
                     ),
                   ),
                   Text(
-                    "📍 Malaga",
+                    "📍 Málaga",
                     style: TextStyle(color: Colors.grey),
                   ),
                   Text(
@@ -216,8 +227,9 @@ class _InstagramProfilePageState extends State<InstagramProfilePage> {
 
             // Publicaciones
             GridView.builder(
+              scrollDirection: Axis.vertical,
               shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
+              physics: const ScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
                 crossAxisSpacing: 2.0,

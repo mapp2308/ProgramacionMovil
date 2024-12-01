@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'rutas_nombradas/app_routes.dart'; // Importa el archivo donde están definidas las rutas nombradas
+import 'routes/app_routes.dart'; // Importa el archivo donde están definidas las rutas nombradas
 
 void main() {
   runApp(const MyApp());

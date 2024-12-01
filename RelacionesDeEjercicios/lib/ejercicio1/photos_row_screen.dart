@@ -1,4 +1,4 @@
-import 'package:flutter_application/rutas_nombradas/screens.dart';
+import 'package:flutter_application/screens/screens.dart';
 
 class PhotosRowScreen extends StatelessWidget {
   const PhotosRowScreen({super.key});

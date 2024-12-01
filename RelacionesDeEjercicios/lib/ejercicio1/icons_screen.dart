@@ -1,4 +1,4 @@
-import 'package:flutter_application/rutas_nombradas/screens.dart';
+import 'package:flutter_application/screens/screens.dart';
 
 class IconsScreen extends StatelessWidget {
   const IconsScreen({super.key});

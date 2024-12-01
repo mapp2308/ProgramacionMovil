@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:math';
-import 'package:flutter_application/rutas_nombradas/screens.dart';
+import 'package:flutter_application/screens/screens.dart';
 
 
 
