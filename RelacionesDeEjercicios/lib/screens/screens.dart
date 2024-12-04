@@ -12,3 +12,5 @@ export 'package:flutter_application/instagram/instagram.dart';
 export 'package:flutter_application/contador/screens/counter_function_screen.dart';
 export 'package:flutter_application/siete_y_medio/siete_y_medio_screen.dart';
 export 'package:flutter_application/desafios/desafios_contenedores.dart';
+export 'package:flutter_application/formulario/formulario.dart';
+export 'package:flutter_application/adivina_el_numero/adivina_el_numeroapp.dart';

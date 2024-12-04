@@ -97,6 +97,20 @@ class CustomDrawer extends StatelessWidget {
               Navigator.of(context).pushReplacementNamed(AppRoutes.sieteymedio);
             },
           ),
+              ListTile(
+            title:
+                const Text('Formulario', style: TextStyle(color: Colors.white)),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(AppRoutes.formulario);
+            },
+          ),
+              ListTile(
+            title:
+                const Text('Adivina le número', style: TextStyle(color: Colors.white)),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(AppRoutes.adivinaelnumero);
+            },
+          ),
         ],
       ),
     );

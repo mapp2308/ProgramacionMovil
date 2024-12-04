@@ -1,4 +1,3 @@
-
 import '../screens/screens.dart';
 
 class AppRoutes {
@@ -14,6 +13,8 @@ class AppRoutes {
   static const String instagram = '/instagram';
   static const String sieteymedio = '/siete-y-medio';
   static const String desafios = '/desafio';
+  static const String formulario = '/formulario';
+  static const String adivinaelnumero = '/adivina_el_numero';
 
   // Mapa de rutas nombradas con sus respectivas pantallas
   static final Map<String, WidgetBuilder> routes = {
@@ -28,5 +29,7 @@ class AppRoutes {
     instagram: (context) => const InstagramProfileApp(),
     sieteymedio: (context) => const SieteYMedioApp(),
     desafios: (context) => const DesafiosScreen(),
+    formulario: (context) => const Formulario(),
+    adivinaelnumero: (context) => const AdivinaNumeroApp(),
   };
 }

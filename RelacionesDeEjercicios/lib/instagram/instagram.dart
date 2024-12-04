@@ -27,16 +27,11 @@ class _InstagramProfilePageState extends State<InstagramProfilePage> {
     'assets/foto3.jpeg',
     'assets/foto4.jpeg',
     'assets/foto5.jpeg',
-    'assets/foto3.jpeg',
-    'assets/foto4.jpeg',
-    'assets/foto5.jpeg','assets/foto1.jpeg',
+    'assets/foto1.jpeg',
     'assets/foto2.jpeg',
     'assets/foto3.jpeg',
     'assets/foto4.jpeg',
-    'assets/foto5.jpeg',
-    'assets/foto3.jpeg',
-    'assets/foto4.jpeg',
-    'assets/foto5.jpeg',
+    'assets/foto5.jpeg'
   ];
 
   final List<String> portraitImages = [
@@ -52,10 +47,10 @@ class _InstagramProfilePageState extends State<InstagramProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         title: const Text(
           "miguelperaza_",
-          style: TextStyle(fontSize: 20, color: Colors.white),
+          style: TextStyle(fontSize: 20, color: Colors.black),
         ),
         actions: [
           IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),
