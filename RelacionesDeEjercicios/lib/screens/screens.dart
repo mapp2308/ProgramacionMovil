@@ -14,3 +14,4 @@ export 'package:flutter_application/siete_y_medio/siete_y_medio_screen.dart';
 export 'package:flutter_application/desafios/desafios_contenedores.dart';
 export 'package:flutter_application/formulario/formulario.dart';
 export 'package:flutter_application/adivina_el_numero/adivina_el_numeroapp.dart';
+export 'package:flutter_application/formulario_switch/formulario_switch_app.dart';

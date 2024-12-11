@@ -110,7 +110,15 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pushReplacementNamed(AppRoutes.adivinaelnumero);
             },
+            
           ),
+           ListTile(
+            title:
+                const Text('Formulario Dinámico', style: TextStyle(color: Colors.white)),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(AppRoutes.formularioswitch);
+            },
+           ),
         ],
       ),
     );

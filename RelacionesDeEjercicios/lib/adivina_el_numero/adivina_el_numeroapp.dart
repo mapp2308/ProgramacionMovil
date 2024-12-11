@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'package:flutter/material.dart';
 import 'package:flutter_application/screens/screens.dart';
 
 class AdivinaNumeroApp extends StatelessWidget {
