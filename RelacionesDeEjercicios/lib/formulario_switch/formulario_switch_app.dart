@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import '../screens/screens.dart';
 
 class FormApp extends StatelessWidget {
@@ -133,7 +131,8 @@ class FormScreenState extends State<FormScreen> {
                       .toList(),
                   onChanged: (value) {
                     setState(() {
-                      numOfChildren = value ?? 1; // Cambiado: Default ahora es 1
+                      numOfChildren =
+                          value ?? 1; // Cambiado: Default ahora es 1
                     });
                   },
                   decoration:
