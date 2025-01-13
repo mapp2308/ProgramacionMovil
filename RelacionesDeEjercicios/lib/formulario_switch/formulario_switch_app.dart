@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import '../screens/screens.dart';
 
 class FormApp extends StatelessWidget {
@@ -33,6 +31,7 @@ class FormScreenState extends State<FormScreen> {
       List.generate(3, (_) => TextEditingController());
 
   // Controladores y variables para el formulario derecho
+
   final _formRightKey = GlobalKey<FormState>();
   DateTime? birthDate;
   String? selectedCity;
@@ -133,7 +132,8 @@ class FormScreenState extends State<FormScreen> {
                       .toList(),
                   onChanged: (value) {
                     setState(() {
-                      numOfChildren = value ?? 1; // Cambiado: Default ahora es 1
+                      numOfChildren =
+                          value ?? 1; // Cambiado: Default ahora es 1
                     });
                   },
                   decoration:
