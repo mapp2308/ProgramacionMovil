@@ -31,6 +31,7 @@ class FormScreenState extends State<FormScreen> {
       List.generate(3, (_) => TextEditingController());
 
   // Controladores y variables para el formulario derecho
+
   final _formRightKey = GlobalKey<FormState>();
   DateTime? birthDate;
   String? selectedCity;
