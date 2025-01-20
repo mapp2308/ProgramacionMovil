@@ -1,4 +1,4 @@
-import 'screens/screens.dart';// Importa el archivo de las
+import 'screens/screens.dart'; // Importa el archivo de las pantallas
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
