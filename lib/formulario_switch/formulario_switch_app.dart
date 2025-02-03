@@ -59,8 +59,9 @@ class FormScreenState extends State<FormScreen> {
   // Métodos de validación
   String? validateName(String? value) {
     if (value == null || value.isEmpty) return 'Ingrese su nombre completo';
-    if (!RegExp(r"^[a-zA-Z\s]+$").hasMatch(value)) {
-      return 'Solo letras y espacios';
+    if (!RegExp(r'^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?:\s[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)?$')
+        .hasMatch(value)) {
+      return 'Letras de la a-z, vocales con tildes y empezar con mayúsculas.';
     }
     return null;
   }

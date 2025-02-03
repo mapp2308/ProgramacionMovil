@@ -27,13 +27,14 @@ class FormularioPantallaState extends State<FormularioPantalla> {
 
   // Validación personalizada para texto (solo letras y vocales con tildes)
   String? _validarTexto(String? value, int minLength) {
-    final regex = RegExp(r'^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+$');
+    final regex =
+        RegExp(r'^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?:\s[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$');
     if (value == null || value.isEmpty) {
       return "Este campo es obligatorio";
     } else if (value.length < minLength) {
       return "Debe tener al menos $minLength caracteres";
     } else if (!regex.hasMatch(value)) {
-      return "Solo se permiten letras de la a-z, vocales con tildes y empezar con maYúsculas.";
+      return "Letras de la a-z, vocales con tildes y empezar con mayúsculas.";
     }
     return null;
   }
